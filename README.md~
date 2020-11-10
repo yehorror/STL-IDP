@@ -2,14 +2,10 @@
 
 To build run following in VS15 cmd
 
-```
-mkdir build
+`mkdir build
 cd build
 cmake .. -Dgtest_force_shared_crt=ON
-msbuild ALL_BUILD.vcxproj
-```
+msbuild ALL_BUILD.vcxproj`
 
 To run built application:
-```
-Debug\STL-IDP.exe
-```
+`Debug\STL-IDP.exe`
