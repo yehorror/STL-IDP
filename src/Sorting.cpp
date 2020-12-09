@@ -64,7 +64,7 @@ TEST(STL, NthElement)
     std::vector<int> sortedCopy(vector);
     std::sort(sortedCopy.begin(), sortedCopy.end());
 
-    const size_t nthIndex = 0;
+    const size_t nthIndex = 3;
 
     std::nth_element(vector.begin(), vector.begin() + nthIndex, vector.end());
 
