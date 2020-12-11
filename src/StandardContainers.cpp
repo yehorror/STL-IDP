@@ -159,3 +159,37 @@ TEST(STL, Map)
     EXPECT_EQ(foundItem->first, 52);    // key
     EXPECT_EQ(foundItem->second, 375);  // value
 }
+
+TEST(STL, MultiSet)
+{
+    // std::multiset is like a std::set, but is able to contain multiple equal elements
+    std::multiset<int> set;
+
+    // insertion is O(log(n))
+    set.insert(456);
+    set.insert(123);
+    set.insert(123);
+
+    auto range = set.equal_range(123);
+
+    EXPECT_EQ(*range.first, 123);
+    EXPECT_EQ(*++range.first, 123);
+}
+
+TEST(STL, MultiMap)
+{
+    // similar to multiset
+    std::multimap<int, int> map;
+
+    map.emplace(12, 34);
+    map.emplace(12, 56);
+    map.emplace(13, 23);
+
+    // returns range of elements with specified key
+    // pair.first is first element 
+    // pair.second is the element that follows after last element of range
+    auto range = map.equal_range(12);
+
+    EXPECT_EQ(range.first->second, 34);
+    EXPECT_EQ((++range.first)->second, 56); // next element
+}
