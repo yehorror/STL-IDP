@@ -1,5 +1,10 @@
 # STL usage examples
 
+To fetch GoogleTest:
+```
+git submodule update --init --recursive
+```
+
 To build run following in VS15 cmd
 
 ```
