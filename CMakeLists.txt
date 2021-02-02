@@ -7,6 +7,9 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_executable(STL-IDP 
 	src/main.cpp
-    src/Sorting.cpp)
+    src/Sorting.cpp
+    src/SmartPointers.cpp
+    src/Iterators.cpp
+    src/StandardContainers.cpp)
 
 target_link_libraries(STL-IDP gtest gmock)
